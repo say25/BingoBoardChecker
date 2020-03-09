@@ -4,10 +4,7 @@ namespace BingoChecker.Boards
 {
     public class Board4 : IBoard
     {
-        public IList<int> GetNumbers()
-        {
-            return Numbers;
-        }
+        public IList<int> GetNumbers() => Numbers;
 
         public static readonly IList<int> Numbers = new List<int>
         {

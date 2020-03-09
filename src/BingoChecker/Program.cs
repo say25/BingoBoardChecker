@@ -14,15 +14,15 @@ namespace BingoChecker
             var boards = new List<IBoard> { new Board1(), new Board2(), new Board3(), new Board4(), };
 
             var i = 1;
-            
+
             foreach (var board in boards)
             {
                 var numbers = board.GetNumbers();
                 var matches = ReadNumbers.Intersect(numbers).ToList();
-
+                
                 Console.WriteLine($"Board {i} - Matches {matches.Count}");
 
-                Console.WriteLine($"Matches: {matches.ListOutNumbers()}");
+                Console.WriteLine($"Matches: {string.Join(',', matches)}");
 
                 if (matches.Count >= 24)
                 {
@@ -35,7 +35,7 @@ namespace BingoChecker
             Console.WriteLine("Checked Your Boards");
         }
 
-        private static readonly IList<int> ReadNumbers = new List<int>
+        private static readonly IEnumerable<int> ReadNumbers = new HashSet<int>
         {
             // DAY1
             60,
@@ -45,7 +45,7 @@ namespace BingoChecker
             // DAY2
             65,
             47,
-            69, 
+            69,
             68,
             // DAY3
             38,
@@ -53,7 +53,7 @@ namespace BingoChecker
             06,
             73,
             // DAY4
-            54, 
+            54,
             63,
             33,
             40,
@@ -62,6 +62,11 @@ namespace BingoChecker
             31,
             20,
             42,
+            // DAY6
+            11,
+            28,
+            41,
+            58,
         };
     }
 }

@@ -2,8 +2,8 @@
 
 namespace BingoChecker
 {
-    internal interface IBoard
+    internal interface IBoard<T>
     {
-        IList<int> GetNumbers();
+        IList<T> GetNumbers();
     }
 }

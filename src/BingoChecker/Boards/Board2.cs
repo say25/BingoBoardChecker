@@ -2,11 +2,11 @@
 
 namespace BingoChecker.Boards
 {
-    public class Board2 : IBoard
+    public class Board2 : IBoard<int>
     {
         public IList<int> GetNumbers() => Numbers;
 
-        public static readonly IList<int> Numbers = new List<int>
+        private static readonly IList<int> Numbers = new List<int>
         {
             09,
             22,

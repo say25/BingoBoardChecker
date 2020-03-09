@@ -11,7 +11,7 @@ namespace BingoChecker
         {
             Console.WriteLine("Hello, Let Me Check Your Bingo Boards!");
 
-            var boards = new List<IBoard> { new Board1(), new Board2(), new Board3(), new Board4(), };
+            var boards = new List<IBoard<int>> { new Board1(), new Board2(), new Board3(), new Board4(), };
 
             var i = 1;
 
